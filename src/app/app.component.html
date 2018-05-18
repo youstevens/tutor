@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="application">
+
+  <div class="monkey">
+    <div class="left-ear"></div>
+    <div class="right-ear"></div>
+    <div class="head">
+      <div class="face">
+        <div class="bottom-jaw"></div>
+
+        <div class="mouth"></div>
+        <div class="upper-lip"></div>
+
+        <div class="left-side-face">
+          <div class="left-eye"></div>
+          <div class="left-nostril"></div>
+        </div>
+        <div class="right-side-face">
+          <div class="right-eye"></div>
+          <div class="right-nostril"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1> Welcome to our new {{title}} </h1>
+
+  <p> Pick one of the topics you would like to begin with below </p>
+  <ul>
+    <li *ngFor="let topic of topics">{{ topic.name }}</li>
+  </ul>
+</div>
