@@ -23,10 +23,12 @@
     </div>
   </div>
 
-  <h1> Welcome to our new {{title}} </h1>
+  <h1 class="app_title"> Welcome to our new {{title}} </h1>
 
-  <p> Pick one of the topics you would like to begin with below </p>
-  <ul>
-    <li *ngFor="let topic of topics">{{ topic.name }}</li>
-  </ul>
+  <!-- <p class="app_message"> Pick one of the topics you would like to begin with below </p> -->
+  <!-- <app-messages></app-messages> -->
+  <nav>
+    <a routerLink="/english">English</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,52 @@
+.card-container, .card_back, .card_front, .card {
+  min-width: 10rem;
+  min-height: 20rem;
+}
+
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-container.flip .card {
+  transform: rotateY(180deg);
+}
+
+.card_front, .card_back {
+  display: block;
+  text-align: center;
+  font-size: 8rem;
+  line-height: 18rem;
+  box-shadow: 5px 5px grey;
+  border: 1px solid grey;
+  padding: 1rem;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.card_front, .card_back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card_front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.card_back {
+	transform: rotateY(180deg);
+}
+
+.content {
+  margin-top: 4rem;
+  display: flex;
+}
+
+.flip-card, .timer {
+  padding: 1rem;
+}

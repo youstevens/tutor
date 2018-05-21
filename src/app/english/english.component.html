@@ -1,0 +1,15 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card_front">
+      <!-- front content -->
+      {{ this.card.text }}
+    </div>
+    <div class="card_back">
+      <!-- back content -->
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="timer"><span class="timer_time">5</span> secs</div>
+  <button class="flip-card" ng-click="this.flipCard()">Flip Card to Remember</button>
+</div>
