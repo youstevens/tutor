@@ -20,10 +20,23 @@ export class EnglishComponent implements OnInit {
     this.card = this.getCard();
   }
 
+  ngAfterContentInit() {
+    window.setTimeout(() => {
+      console.log('hello world');
+    }, 100);
+  }
+
+  counter(): void {
+    console.log('hello');
+  }
+
   flipCard(): void {
-    // let cardContainer = document.getElementByClassName('card-container');
-    // cardContainer.classList.add("flip");
-    return;
+    let cardContainer = (window.document.getElementsByClassName('card-container'))[0];
+    if(cardContainer.classList.contains('flip')) {
+      cardContainer.classList.remove('flip');
+    } else {
+      cardContainer.classList.add("flip");
+    }
   }
 
   getCard(): TextCard {
